@@ -1,0 +1,232 @@
+/* Gold Gym - Midterm. Bootstrap is themed through its own CSS variables; spacing uses Bootstrap utilities, only the pure-CSS card group (Task 2) keeps its own spacing. */
+:root {
+  --bs-dark-rgb: 23, 20, 15;
+  --bs-link-color-rgb: 237, 231, 217;
+  --bs-link-hover-color-rgb: 199, 160, 70;
+  --bg: #17140f;
+  --panel: #211c15;
+  --gold: #c7a046;
+  --cream: #ede7d9;
+  --muted: #c7c0b2;
+  --line: #514735;
+}
+body {
+  background: var(--bg);
+  color: var(--cream);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+.h3 {
+  line-height: 1.1;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.75rem;
+}
+h3,
+.h3 {
+  font-size: 1.35rem;
+}
+p {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.site-header {
+  background: #17140ff2;
+  border-bottom: 1px solid var(--line);
+}
+.logo {
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+.logo span {
+  color: var(--cream);
+  font-size: 0.9rem;
+}
+.navbar .nav-link {
+  color: var(--cream);
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--gold);
+}
+.hero {
+  background: linear-gradient(120deg, #17140f, #241e14);
+}
+.eyebrow {
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+.lead {
+  max-width: 42rem;
+}
+.wide {
+  width: 100%;
+  border: 1px solid var(--line);
+  display: block;
+}
+.stats {
+  border-left: 1px solid var(--line);
+}
+.stats b {
+  display: block;
+  color: var(--gold);
+  font-size: 2.25rem;
+}
+.stats em {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.btn-warning {
+  --bs-btn-bg: #c7a046;
+  --bs-btn-border-color: #c7a046;
+  --bs-btn-color: #17140f;
+  --bs-btn-hover-bg: #dfbd6b;
+  --bs-btn-hover-border-color: #dfbd6b;
+  --bs-btn-hover-color: #17140f;
+  --bs-btn-active-bg: #dfbd6b;
+  --bs-btn-active-border-color: #dfbd6b;
+  --bs-btn-active-color: #17140f;
+  font-weight: 800;
+}
+.btn-outline-warning {
+  --bs-btn-color: #c7a046;
+  --bs-btn-border-color: #c7a046;
+  --bs-btn-hover-bg: #c7a046;
+  --bs-btn-hover-border-color: #c7a046;
+  --bs-btn-hover-color: #17140f;
+  --bs-btn-active-bg: #c7a046;
+  --bs-btn-active-border-color: #c7a046;
+  --bs-btn-active-color: #17140f;
+  font-weight: 800;
+}
+.responsive-card-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+.responsive-card-group article,
+.gym-card,
+.location-panel,
+.contact-form {
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+.responsive-card-group article {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.responsive-card-group img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.gym-card {
+  color: var(--cream);
+}
+.gym-card .card-body {
+  background: var(--panel);
+}
+.gym-card .card-text {
+  color: var(--muted);
+}
+.round {
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  width: 70%;
+}
+.table-dark {
+  --bs-table-bg: var(--panel);
+  --bs-table-border-color: var(--line);
+  --bs-table-color: var(--cream);
+}
+.table th {
+  color: var(--gold);
+}
+.carousel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+.carousel-image {
+  height: min(60vw, 520px);
+  object-fit: contain;
+  background: var(--bg);
+}
+.contact-form .form-control,
+.contact-form .form-select,
+.contact-form .input-group-text {
+  background: #17140f;
+  border-color: var(--line);
+  color: var(--cream);
+}
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.2rem rgba(199, 160, 70, 0.25);
+}
+footer {
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+footer strong {
+  color: var(--cream);
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1.05rem;
+  }
+  .responsive-card-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 5.75rem;
+  }
+  h2 {
+    font-size: 2.75rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    font-size: 1.125rem;
+  }
+  .responsive-card-group {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 991.98px) {
+  .stats {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+}
